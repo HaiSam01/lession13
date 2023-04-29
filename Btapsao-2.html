@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="view"></p>
+<button type="button" onclick="ex3()">ex3</button>
+<script>
+
+  function ex1() {
+    let a = [
+      [1, 2, 1, 24],
+      [8, 11, 9, 4],
+      [7, 0, 7, 27],
+      [7, 4, 28, 14],
+      [3, 10, 26, 7]
+    ];
+    for (let i in a) {
+      console.log(" row " + i)
+      for (let j in a[i]) {
+        console.log(a[i][j]);
+      }
+    }
+  }
+  function ex2(){
+    let array = ['c', 's', 'c', '2', '6', '1'];
+    let changeArray = array.reverse();
+    alert(changeArray.join(""));
+  }
+
+  function ex3(){
+    let array = ['c', 's', 'c', '2', '6', '1'];
+    let index = 0
+    let number = typeof 12
+    console.log("number")
+    for (let i = 0; i < array.length; i++) {
+      if ( !isNaN(parseInt(array[i]))) {
+        index++;
+      }
+    }
+    alert("co" + index)
+  }
+</script>
+</body>
+</html>

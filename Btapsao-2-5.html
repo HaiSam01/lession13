@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="abc()">abc</button>
+<script>
+ function abc()  {
+        let str_a = prompt("Nhap Chuoi A");
+        let str_b = prompt("Nhap Chuoi B");
+        let index = 0;
+
+        for (let i = 0; i < str_a.length; i++) {
+            if (str_a[i] === str_b[i]) {
+                index++
+            }
+        }
+        if (index === str_b.length && index === str_a.length)
+        {
+            alert("Mang A Giong Mang B")
+        } else {
+            alert("Mang A Khac Mang B")
+        }
+    }
+</script>
+</body>
+</html>

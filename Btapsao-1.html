@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="ex1()">Bai1</button>
+<button type="button" onclick="ex2()">Bai2</button>
+<button type="button" onclick="ex3()">Bai3</button>
+<button type="button" onclick="ex4()">Bai4</button>
+<button type="button" onclick="ex5()">Bai5</button>
+<button type="button" onclick="ex6()">Bai6</button>
+<button type="button" onclick="ex7()">Bai7</button>
+<button type="button" onclick="ex8()">Bai8</button>
+<button type="button" onclick="ex9()">Bai9</button>
+
+<script>
+    function  ex1() {
+        let soNguyen = [0 ,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+        let lonHon = 0;
+        let bang = 0;
+        for ( let i = 0; i < soNguyen.length; i++){
+if ( soNguyen[i] > 10 ){
+    lonHon++;
+} else if ( soNguyen[i] === 10 ){
+    bang++;
+}
+        }
+        alert("Co" + bang + "so trong mang bang 10");
+        alert("Co" + lonHon + "so trong mang lon hon 10");
+    }
+
+    function ex2 () {
+        let number = [11,45,33,84,742,533,643,24,64,64113]
+        let index = 0;
+        let maxNumber = 0;
+for (let i = 1; i < number.length; i ++) {
+    if (number[i-1] < number [i]){
+        index = i;
+        maxNumber = number[i];
+    }
+    else if ( number[i-1] > number [i] ){
+        maxNumber = number[i-1];
+
+    }
+}
+alert("phần tử có giá trị lớn nhất trong mảng la: " + maxNumber + " vị trí của phần tử đó la " + index );
+    }
+    function ex3() {
+        let number = [2,3,4,5,6,7,8,9,10];
+        let maxNumber = 0;
+        let sum =0;
+        let mediumNumber;
+        for ( let i = 1 ; i < number.length; i++){
+            if (number[i-1] < number[i]){
+                maxNumber = number[i]
+            } else if ( number[i-1] > number[i] ) {
+                maxNumber = number[i-1]
+            }
+        }
+        for (let i = 0 ; i < number.length; i++){
+            sum += number[i];
+        }
+        mediumNumber = (sum / number.length);
+        alert("So Lon Nhat Trong Mang La " + maxNumber);
+        alert("Trung Binh Cua Mang La " + mediumNumber);
+    }
+
+    function ex4 () {
+        let inputNumber = prompt("Nhap So vao Day");
+        let array = inputNumber.split("") ;
+
+let newArray = array.reverse();
+
+    alert(newArray.join(""));
+    }
+    
+    function ex5() {
+        let inputNumber = prompt("Nhap tung chuoi so vao Day");
+        let array = inputNumber.split(" ") ;
+        let index = 0;
+        for ( let i = 0; i < array.length; i++){
+            let num = parseInt(array[i])
+    if (num < 0){
+            index++;
+            }
+        }
+        alert("Trong Mang Co " + index + " So Am")
+    }
+
+    function ex6(){
+        let number = [23,2,3,4,5,6,7,8,9,10];
+let inputNumberOnKey = parseInt(prompt("Nhap So Ban Muon Kiem Tra: "));
+for ( let i = 0 ; i < number.length; i++) {
+    if (inputNumberOnKey === number[i]) {
+        alert(inputNumberOnKey + "Thuoc Trong Mang Array");
+        return;
+    }
+}
+alert(inputNumberOnKey + " khong Thuoc Trong Mang Array");
+    }
+    function ex7() {
+        let number = [23,2,3,4,5,6,7,8,9,10];
+        let inputNumberOnKey = parseInt(prompt("Nhap So Ban Muon Kiem Tra: "));
+        for ( let i = 0 ; i < number.length; i++) {
+            if (inputNumberOnKey === number[i]) {
+                number[i]= number.splice(i+1);
+            }
+        }
+        alert(number)
+    }
+    function ex8() {
+        let number = [2,3,4,5,6,7,8,9,10];
+       number.sort(function (a,b){
+           return b-a;
+       })
+        alert(number);
+    }
+    function ex9(){
+       let a = []
+        let b = []
+        let c =[]
+        for ( let i = 0; i < 10 ; i++){
+            a[i]= parseInt(prompt("Nhap So Phan Tu Vao Mang A co chi so la" +i))
+        }
+        for ( let i = 0; i < 10 ; i++){
+            b[i]= parseInt(prompt("Nhap So Phan Tu Vao Mang B co chi so la" +i))
+            }
+       c =  c.concat(a,b);
+alert("Vay C co Mang la [" + c + " ]co so phan tu la " + c.length);
+    }
+</script>
+</body>
+</html>

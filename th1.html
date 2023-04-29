@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="bai3()">bai3</button>
+<script>
+ function bai1() {
+   let myColor = ["Red", "Green", "White", "Black"];
+
+   console.log(myColor.join())
+ }
+   function bai2 () {
+     let a = parseInt(prompt("Nhap so can chuyen doi:"));
+
+
+     let b = a.toString();
+     let index = b[0];
+     for (let i = 1; i < b.length; i++) {
+       if (b[i - 1] % 2 === 0 && b[i] % 2 === 0) {
+         index += "-" + b[i - 1];
+       } else {
+         index += (b[i])
+       }
+     }
+     alert(index)
+   }
+
+function bai3() {
+let nhapChuoi = prompt("Nhap chu muon thay doi");
+let upKey = nhapChuoi.toUpperCase();
+let downkey = nhapChuoi.toLowerCase();
+let newstring = "";
+
+for (let i = 0; i < nhapChuoi.length;i++){
+  if ( nhapChuoi[i] === upKey[i] ){
+newstring += downkey[i];
+  } else if ( nhapChuoi[i] === downkey[i]) {
+  newstring += upKey[i];
+  }
+
+}
+ alert(newstring);
+
+}
+</script>
+</body>
+</html>

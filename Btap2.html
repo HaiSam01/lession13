@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <label>Tu dien anh-viet
+        <input type="text" id="text">
+    </label>
+    <button type="button" onclick="baitap2()"> Click Here</button>
+</form>
+<script>
+  function baitap2() {
+        let tiengViet = document.getElementById("text").value
+        let tuDienTiengViet = ["Trai Chuoi", "Trai Cam", "Trai Nho"];
+        let tuDienTiengAnh = ["Banana", "Orange", "Grape"];
+        let newWork = "";
+
+        for (let i = 0; i < tuDienTiengViet.length; i++) {
+            if (tiengViet === tuDienTiengViet[i]) {
+                newWork = tuDienTiengAnh[i];
+            }
+        }
+      alert("Tu Tieng Anh La :" + newWork);
+  }
+</script>
+</body>
+</html>
